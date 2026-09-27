@@ -1,0 +1,104 @@
+{
+  "A": {
+    "title": "Introduction",
+    "page": "section-a.html",
+    "summary": "Purpose statement, Letter to Self, and a statement of initial teaching philosophy.",
+    "caption": null,
+    "tasks": [
+      "purpose-statement",
+      "letter-to-self",
+      "teaching-philosophy"
+    ]
+  },
+  "B": {
+    "title": "Unit and Lesson Planning",
+    "page": "section-b.html",
+    "alternative": "1",
+    "summary": "A sample instructional unit for a major topic in my subject specialization, with a task analysis, lesson objective classification, two contrasting lesson plans, and an instructional scaffolding response.",
+    "caption": {
+      "artifactId": "caption-b",
+      "maxWords": 200,
+      "allowAV": true,
+      "maxAvMinutes": 2
+    },
+    "tasks": [
+      "unit-conceptual-map",
+      "unit-lesson-outlines",
+      "task-analysis",
+      "lesson-objectives",
+      "lesson-plan-1",
+      "lesson-plan-2",
+      "scaffolding-response",
+      "scaffolding-flowchart",
+      "antigravity",
+      "research-paper"
+    ]
+  },
+  "C": {
+    "title": "Technology Integration",
+    "page": "section-c.html",
+    "summary": "A taught lesson demonstrating two technology tools, with justification, and a reflective audio/video response.",
+    "caption": {
+      "artifactId": "caption-c",
+      "maxWords": 100,
+      "allowAV": true,
+      "maxAvMinutes": 1
+    },
+    "tasks": [
+      "tech-lesson-plan",
+      "tech-justification",
+      "tech-reflection-video"
+    ]
+  },
+  "D": {
+    "title": "Growth in Assessment Competence",
+    "page": "section-d.html",
+    "summary": "Analysis of classroom assessment standards, a critique of an existing assessment, and a performance assessment with rubric built from the Section B unit.",
+    "caption": {
+      "artifactId": "caption-d",
+      "maxWords": 100,
+      "allowAV": true,
+      "maxAvMinutes": 1
+    },
+    "tasks": [
+      "assessment-standards",
+      "assessment-critique",
+      "critiqued-test",
+      "performance-vs-traditional",
+      "performance-assessment",
+      "performance-rubric",
+      "assessment-goals",
+      "assessment-benefits-challenges"
+    ]
+  },
+  "E": {
+    "title": "Transformations",
+    "page": "section-e.html",
+    "summary": "A curriculum integration report and a reflection on being an agent of change.",
+    "caption": {
+      "artifactId": "caption-e",
+      "maxWords": 100,
+      "allowAV": true,
+      "maxAvMinutes": 1
+    },
+    "tasks": [
+      "curriculum-integration-report",
+      "curriculum-integration-evidence",
+      "agent-of-change"
+    ]
+  },
+  "F": {
+    "title": "Reflective Summary",
+    "page": "section-f.html",
+    "summary": "A closing reflection on the portfolio process and how my teaching philosophy has changed.",
+    "caption": {
+      "artifactId": "caption-f",
+      "maxWords": 100,
+      "allowAV": true,
+      "maxAvMinutes": 1
+    },
+    "tasks": [
+      "test-video"
+    ]
+  }
+}

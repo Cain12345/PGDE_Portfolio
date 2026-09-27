@@ -1,0 +1,4 @@
+{
+  "passwordHash": "a5c9b6025071d1cefbcc31659baf4a1dfd509b79010833e15f5cebcbcc5b52ab",
+  "note": "SHA-256 hex digest — not secret, only gates the Admin UI."
+}
