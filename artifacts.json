@@ -1,0 +1,359 @@
+{
+  "purpose-statement": {
+    "sectionId": "A",
+    "title": "Purpose Statement",
+    "type": "text",
+    "wordLimit": 250,
+    "wordCount": 0,
+    "body": "[Placeholder — write your purpose statement here. Explain your intentions in putting together this portfolio. Max 250 words.]",
+    "resources": []
+  },
+  "letter-to-self": {
+    "sectionId": "A",
+    "title": "Letter to Self",
+    "type": "text",
+    "wordLimit": 500,
+    "wordCount": 0,
+    "body": "[Placeholder — what led you to become a teacher, why you chose this programme, and what you hope to achieve. Max 500 words.]",
+    "resources": []
+  },
+  "teaching-philosophy": {
+    "sectionId": "A",
+    "title": "Statement of Initial Teaching Philosophy",
+    "type": "text",
+    "wordLimit": 500,
+    "wordCount": 0,
+    "body": "[Placeholder — communicate your beliefs, values, and conceptions about teaching. Use a metaphor to describe your distinctive approach to pedagogy. Max 500 words.]",
+    "resources": []
+  },
+  "unit-conceptual-map": {
+    "sectionId": "B",
+    "title": "Unit Conceptual Map",
+    "type": "image",
+    "description": "[Placeholder — add a conceptual map image for your instructional unit's major topic.]",
+    "resources": []
+  },
+  "unit-lesson-outlines": {
+    "sectionId": "B",
+    "title": "Unit Lesson Outlines (5+ lessons)",
+    "type": "pdf",
+    "description": "[Placeholder — outlines of at least five lessons from the unit.]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Unit Lesson Outlines (PDF)",
+        "url": "assets/documents/unit-lesson-outlines.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "task-analysis": {
+    "sectionId": "B",
+    "title": "Task Analysis",
+    "type": "text",
+    "wordLimit": 500,
+    "wordCount": 0,
+    "body": "[Placeholder — identify the component skills required for the high-order task and the sequence in which they must be taught. Max 500 words.]",
+    "resources": []
+  },
+  "lesson-objectives": {
+    "sectionId": "B",
+    "title": "Lesson Objectives, Classification and Mapping",
+    "type": "text",
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "[Placeholder — choose one lesson from the unit. List the instructional objectives as a numbered list, classify each by level and domain, and match each objective to its associated unit goal(s) and objective(s).]",
+    "resources": []
+  },
+  "lesson-plan-1": {
+    "sectionId": "B",
+    "title": "Lesson Plan 1",
+    "type": "pdf",
+    "strategy": "[Placeholder — name the pedagogical strategy used]",
+    "description": "[Placeholder — complete lesson plan demonstrating strategy 1.]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Lesson Plan 1 (PDF)",
+        "url": "assets/documents/lesson-plan-1.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "lesson-plan-2": {
+    "sectionId": "B",
+    "title": "Lesson Plan 2",
+    "type": "pdf",
+    "strategy": "[Placeholder — name a different pedagogical strategy]",
+    "description": "[Placeholder — complete lesson plan demonstrating strategy 2 (must differ from Lesson Plan 1).]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Lesson Plan 2 (PDF)",
+        "url": "assets/documents/lesson-plan-2.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "scaffolding-response": {
+    "sectionId": "B",
+    "title": "Instructional Scaffolding — Written Response",
+    "type": "text",
+    "wordLimit": 500,
+    "wordCount": 0,
+    "body": "[Placeholder — (i) define instructional scaffolding, (ii) explain the component parts of providing contingent instructional scaffolding, (iii) reference the flow chart below, (iv) explain the process it depicts. Max 500 words, excluding flow chart.]",
+    "resources": []
+  },
+  "scaffolding-flowchart": {
+    "sectionId": "B",
+    "title": "Instructional Scaffolding — Flow Chart",
+    "type": "image",
+    "description": "[Placeholder — add a flow chart showing how a specific set of instructional scaffolds would be used to teach a named major concept/skill.]",
+    "resources": []
+  },
+  "caption-b": {
+    "sectionId": "B",
+    "title": "Section B Caption",
+    "mode": "text",
+    "maxWords": 200,
+    "wordCount": 0,
+    "body": "[Placeholder caption — up to 200 words, or a 2-minute audio/visual clip reflecting on growth in unit and lesson planning.]",
+    "resources": []
+  },
+  "tech-lesson-plan": {
+    "sectionId": "C",
+    "title": "Lesson Plan with Two Technology Tools",
+    "type": "pdf",
+    "tools": [
+      "[Placeholder tool 1]",
+      "[Placeholder tool 2]"
+    ],
+    "description": "[Placeholder — lesson plan and supporting resources, including any media links.]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Technology Integration Lesson Plan (PDF)",
+        "url": "assets/documents/tech-integration-lesson-plan.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "tech-justification": {
+    "sectionId": "C",
+    "title": "Justification of Tool Choice",
+    "type": "text",
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "[Placeholder — justify your choice of the two technology tools for the selected lesson.]",
+    "resources": []
+  },
+  "tech-reflection-video": {
+    "sectionId": "C",
+    "title": "Technology Integration Reflection",
+    "type": "video",
+    "durationNote": "5-8 minutes",
+    "description": "[Placeholder — reflect on the ease/challenge of incorporating technology, how you will sustain its use, and how the experience shaped your understanding of teaching and learning.]",
+    "resources": []
+  },
+  "caption-c": {
+    "sectionId": "C",
+    "title": "Section C Caption",
+    "mode": "text",
+    "maxWords": 100,
+    "wordCount": 0,
+    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "resources": []
+  },
+  "assessment-standards": {
+    "sectionId": "D",
+    "title": "Two Classroom Assessment Standards",
+    "type": "text",
+    "wordLimit": 500,
+    "wordCount": 0,
+    "body": "[Placeholder — choose and explain any two standards of classroom assessment or test development, referencing supporting literature. Max 500 words.]",
+    "resources": []
+  },
+  "assessment-critique": {
+    "sectionId": "D",
+    "title": "Critique of an Existing Assessment",
+    "type": "text",
+    "wordLimit": 700,
+    "wordCount": 0,
+    "body": "[Placeholder — assess the extent to which your appended assessment conforms to the two standards discussed above, and offer 2 suggestions for improvement or adaptation. Max 700 words.]",
+    "resources": []
+  },
+  "critiqued-test": {
+    "sectionId": "D",
+    "title": "Appended Assessment (Critiqued)",
+    "type": "pdf",
+    "description": "[Placeholder — the end-of-term test or assessment being critiqued.]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Critiqued Assessment (PDF)",
+        "url": "assets/documents/critiqued-test.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "performance-vs-traditional": {
+    "sectionId": "D",
+    "title": "Performance vs. Traditional Assessment",
+    "type": "text",
+    "wordLimit": 300,
+    "wordCount": 0,
+    "body": "[Placeholder — describe at least 3 criteria which distinguish performance assessment from traditional assessment. Max 300 words.]",
+    "resources": []
+  },
+  "performance-assessment": {
+    "sectionId": "D",
+    "title": "Performance Assessment (built from Section B unit)",
+    "type": "pdf",
+    "description": "[Placeholder — a performance assessment evaluating understanding of a concept/topic from the Section B unit.]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Performance Assessment (PDF)",
+        "url": "assets/documents/performance-assessment.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "performance-rubric": {
+    "sectionId": "D",
+    "title": "Rubric for the Performance Assessment",
+    "type": "pdf",
+    "description": "[Placeholder — the rubric used to assess the performance assessment above.]",
+    "resources": [
+      {
+        "id": "res-1",
+        "title": "Performance Rubric (PDF)",
+        "url": "assets/documents/performance-rubric.pdf",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ]
+  },
+  "assessment-goals": {
+    "sectionId": "D",
+    "title": "Learning Goals and How the Assessment Supports Them",
+    "type": "text",
+    "wordLimit": 250,
+    "wordCount": 0,
+    "body": "[Placeholder — state what you want students to understand about the topic and how the performance assessment task and rubric assist in meeting these goals. Max 250 words.]",
+    "resources": []
+  },
+  "assessment-benefits-challenges": {
+    "sectionId": "D",
+    "title": "Benefits and Challenges of Administering the Assessment",
+    "type": "text",
+    "wordLimit": 450,
+    "wordCount": 0,
+    "body": "[Placeholder — discuss two benefits and two challenges that may arise from administering the rubric and performance assessment. Max 450 words.]",
+    "resources": []
+  },
+  "caption-d": {
+    "sectionId": "D",
+    "title": "Section D Caption",
+    "mode": "text",
+    "maxWords": 100,
+    "wordCount": 0,
+    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "resources": []
+  },
+  "curriculum-integration-report": {
+    "sectionId": "E",
+    "title": "Curriculum Integration Report",
+    "type": "text",
+    "wordLimit": 1000,
+    "wordCount": 0,
+    "body": "[Placeholder — report on collaborating with colleague(s) to teach a lesson using an integrated approach to curriculum delivery, based on a named curriculum integration model with supporting literature. Max 1000 words.]",
+    "resources": []
+  },
+  "curriculum-integration-evidence": {
+    "sectionId": "E",
+    "title": "Evidence of Collaboration",
+    "type": "image",
+    "description": "[Placeholder — photo(s) and/or audio/video clips and lesson plans evidencing the collaboration described above.]",
+    "resources": []
+  },
+  "agent-of-change": {
+    "sectionId": "E",
+    "title": "Agent of Change",
+    "type": "text",
+    "wordLimit": 450,
+    "wordCount": 0,
+    "body": "[Placeholder — (a) analyze what motivates you to be a change agent, (b) describe efforts you are making/can make to influence teaching and learning at your school. 400-450 words.]",
+    "resources": []
+  },
+  "caption-e": {
+    "sectionId": "E",
+    "title": "Section E Caption",
+    "mode": "text",
+    "maxWords": 100,
+    "wordCount": 0,
+    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "resources": []
+  },
+  "caption-f": {
+    "sectionId": "F",
+    "title": "Section F Caption",
+    "mode": "text",
+    "maxWords": 100,
+    "wordCount": 0,
+    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "resources": []
+  },
+  "test-video": {
+    "sectionId": "F",
+    "title": "Test Video",
+    "type": "video",
+    "resources": [
+      {
+        "id": "res-1790529526283",
+        "title": "Patient Zero",
+        "url": "https://www.youtube.com/embed/BpR280fXISA",
+        "provider": "youtube",
+        "displayMode": "embed"
+      }
+    ],
+    "durationNote": "",
+    "description": ""
+  },
+  "antigravity": {
+    "sectionId": "B",
+    "title": "Antigravity",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1790530004615",
+        "title": "Instruction File",
+        "url": "https://drive.google.com/file/d/1spldRpaJm1_Q_-YbK-dwbl5RMUpC7_Rl/view?usp=sharing",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "research-paper": {
+    "sectionId": "B",
+    "title": "Research Paper",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1790530162142",
+        "title": "RP1",
+        "url": "https://drive.google.com/file/d/1XDP9wJHpNMC-5qM6mac2CsZfCigi3wAU/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": "A random research paper"
+  }
+}
