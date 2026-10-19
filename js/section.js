@@ -58,15 +58,7 @@ function renderCaption(caption, artifact) {
   if (artifact.mode === "video") {
     wrap.appendChild(hasResources ? renderResources(artifact.resources) : emptyResourceHint("video"));
   } else {
-    const count = countWords(artifact.body);
     wrap.appendChild(el("p", { class: "task-card__body", text: artifact.body }));
-    wrap.appendChild(
-      el("p", {
-        class: "word-count",
-        text: `${count} / ${caption.maxWords} words`,
-        "data-over": String(count > caption.maxWords),
-      })
-    );
     if (hasResources) wrap.appendChild(renderResources(artifact.resources));
   }
   return wrap;
@@ -77,17 +69,6 @@ function renderTaskCard(id, artifact) {
   const header = el("div", { class: "task-card__header" }, [
     el("h3", { class: "task-card__title", text: artifact.title }),
   ]);
-
-  if (artifact.type === "text" && artifact.wordLimit) {
-    const count = countWords(artifact.body);
-    header.appendChild(
-      el("span", {
-        class: "word-count",
-        text: `${count} / ${artifact.wordLimit} words`,
-        "data-over": String(count > artifact.wordLimit),
-      })
-    );
-  }
   card.appendChild(header);
 
   if (artifact.strategy) {
