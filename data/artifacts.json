@@ -3,27 +3,27 @@
     "sectionId": "A",
     "title": "Purpose Statement",
     "type": "text",
-    "wordLimit": 250,
+    "wordLimit": null,
     "wordCount": 0,
-    "body": "[Placeholder — write your purpose statement here. Explain your intentions in putting together this portfolio. Max 250 words.]",
+    "body": "My purpose with this portfolio as an educator is to display all the skills and competencies learned to foster a dynamic, inclusive, historical  and student-centred environment . This portfolio encompasses teaching strategies and assessments that showcase the knowledge that was retained over this one-year programme. The intention of attaining these new strategies and skills were to educate and equip myself with the ability to encourage learners in the classroom. This teaching practicum helped me acquire the confidence needed to navigate the evolving education landscape due to technological advancement.\n\nThis programme and portfolio have allowed me as a student of education to think critically, make mistakes safely, and discover my own strong points, weaknesses and potential. All teachers contribute various special strengths and perspectives to the learning community and through the portfolio I can display some of my own contributions. My teaching purpose is to cultivate an environment of equal opportunities, kindness and safety in classroom where all voices are valued. Through games based learning and scaffolded instruction, I aim to create motivated and excited students and I hope to empower them to become confident critical thinkers, researchers and life long learners.\n",
     "resources": []
   },
   "letter-to-self": {
     "sectionId": "A",
     "title": "Letter to Self",
     "type": "text",
-    "wordLimit": 500,
+    "wordLimit": null,
     "wordCount": 0,
-    "body": "[Placeholder — what led you to become a teacher, why you chose this programme, and what you hope to achieve. Max 500 words.]",
+    "body": "Dear Zoe,\nI fell in love with history during high school. It was my favourite subject. I was always interested and intrigued by the major events in history and I always felt happy doing history. I still feel happy when I teach history. I genuinely love the field. My teachers in high school were excellent and my school had subject awards and I constantly topped history class and attained them. This ultimately led me to become a teacher as I decided to pursue history as my degree, and I signed up for teaching as I knew I would be happy teaching the subject.\n\nI wanted to pursue my Postgraduate Diploma in Education, but I hadn’t been placed as a teacher as yet so I was advised to do my Master of Education. After I attained my master’s, I was told that it was useless without my Post graduate diploma in Education as that was the qualification I needed to be considered for any promotions. I was reluctant to do it but I knew I had to at this point otherwise all my previous struggles would have no meaning. So I quickly applied for the last year that it was available free. My husband also pushed me to do it. Even though the ability to get a promotion in my current school is very low. I hope one day to be able to teach at a school where I can grow and advance my career in education.\n\nI hope to achieve by doing this programme the necessary skills to have a positive impact on my students education. I hope to gain new perspectives, new methods,  and to uncover the weaknesses in my teaching philosophy. I would like to improve and become the best possible teacher that I can be.\n\n",
     "resources": []
   },
   "teaching-philosophy": {
     "sectionId": "A",
     "title": "Statement of Initial Teaching Philosophy",
     "type": "text",
-    "wordLimit": 500,
+    "wordLimit": null,
     "wordCount": 0,
-    "body": "[Placeholder — communicate your beliefs, values, and conceptions about teaching. Use a metaphor to describe your distinctive approach to pedagogy. Max 500 words.]",
+    "body": "My purpose as an educator is to cultivate a dynamic, inclusive, and equitable classroom where learners are empowered to develop critical thinking and emotional intelligence. I personally believe that welcoming environment without fear, judgement and criticism provides the best setting for learning. The teacher as well as the classroom must have warm and open personality or atmosphere while still making classroom boundaries and rules known. Patience, empathy and understanding as a teacher I believe is crucial. I think that if a student feel understood or respected by you, they will in turn respect and listen to you.\n\nThrough game-based learning I hope to add to the way history and social studies are learnt and experiences. While I believe traditional learning techniques such as reading and note taking are valuable and irreplaceable learning skills especially for history.an I strongly believe that more learning strategies are needed. I observed that there are not enough learning activities and games in history and social studies. In teaching History and Social Studies, I use these games and activities to bring past struggles and societal systems to life, transforming students from passive listeners into active participants.\n\n Teachers have a large impact on their students and can affect and influence them for the rest of their lives. I am committed to scaffolding both cognitive and affective growth, guiding students to become resilient, socially conscious citizens who can collaborate effectively and question the world around them. With proper guidance, and motivation students can benefit tremendously.\n\nAs a history teacher I see myself as a time traveller guide or time wanderer guide. I believe it is my duty to help portray to students the importance of significant historical events. I believe that I must help students visualise, interpret and remember different critical points in history that still affect the world today. I believe I can help update and transform history using games-based learning.\n",
     "resources": []
   },
   "unit-conceptual-map": {
@@ -328,13 +328,13 @@
   },
   "antigravity": {
     "sectionId": "B",
-    "title": "Antigravity",
+    "title": "Research Paper New",
     "type": "pdf",
     "resources": [
       {
         "id": "res-1790530004615",
         "title": "Instruction File",
-        "url": "https://drive.google.com/file/d/1spldRpaJm1_Q_-YbK-dwbl5RMUpC7_Rl/view?usp=sharing",
+        "url": "https://drive.google.com/file/d/18i3M_G2-NrBsvn0qhftnSGAtlEQrPPfb/preview",
         "provider": "google-drive",
         "displayMode": "embed"
       }

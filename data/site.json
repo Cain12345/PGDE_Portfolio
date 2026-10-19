@@ -1,6 +1,6 @@
 {
   "student": {
-    "name": "Deirdre Zoe Subran-Ganesh",
+    "name": "Deirdre Zoe Subran Ganesh",
     "programme": "Postgraduate Diploma in Education, 2025-2026",
     "discipline": "Caribbean History",
     "institution": "The University of the West Indies, St. Augustine",
@@ -15,5 +15,10 @@
     "D",
     "E",
     "F"
-  ]
+  ],
+  "totalMarks": {
+    "sections": 124,
+    "captions": 18,
+    "grandTotal": 142
+  }
 }
