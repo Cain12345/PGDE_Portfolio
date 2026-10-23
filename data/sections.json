@@ -22,16 +22,12 @@
       "maxAvMinutes": 2
     },
     "tasks": [
-      "unit-conceptual-map",
       "unit-lesson-outlines",
-      "task-analysis",
       "lesson-objectives",
+      "task-analysis",
       "lesson-plan-1",
       "lesson-plan-2",
-      "scaffolding-response",
-      "scaffolding-flowchart",
-      "antigravity",
-      "research-paper"
+      "instructional-scaffolding"
     ]
   },
   "C": {
