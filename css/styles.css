@@ -243,15 +243,28 @@ main {
 .hero h1 { font-size: 1.9rem; }
 .hero .meta { color: var(--color-text-muted); margin-bottom: var(--space-2); }
 
+.hero__intro-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
 .hero__photo {
   display: block;
+  flex: none;
   width: 100%;
-  max-width: 320px;
-  max-height: 320px;
+  max-width: 240px;
+  max-height: 240px;
   object-fit: cover;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
-  margin: var(--space-2) 0 var(--space-3);
+}
+
+.hero__intro-text {
+  flex: 1 1 280px;
+  margin: 0;
 }
 
 .callout {

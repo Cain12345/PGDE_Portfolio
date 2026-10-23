@@ -19,8 +19,10 @@ async function renderHome() {
       <p class="section-hero__eyebrow">${escapeHtml(site.student.programme)}</p>
       <h1>${escapeHtml(site.student.name)}</h1>
       <p class="meta">${escapeHtml(site.student.discipline)} &middot; ${escapeHtml(site.student.institution)}</p>
-      ${photoHtml}
-      <p>${escapeHtml(site.student.introduction)}</p>
+      <div class="hero__intro-row">
+        ${photoHtml}
+        <p class="hero__intro-text">${escapeHtml(site.student.introduction)}</p>
+      </div>
     `;
 
     tocEl.innerHTML = "";
