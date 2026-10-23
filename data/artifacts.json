@@ -90,33 +90,32 @@
       "[Placeholder tool 1]",
       "[Placeholder tool 2]"
     ],
-    "description": "[Placeholder — lesson plan and supporting resources, including any media links.]",
+    "description": "",
     "resources": [
       {
         "id": "res-1",
-        "title": "Technology Integration Lesson Plan (PDF)",
-        "url": "assets/documents/tech-integration-lesson-plan.pdf",
-        "provider": "other",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1HdeoBSUCKaLE3zcbEhARx2BIGftIBUnP/preview",
+        "provider": "google-drive",
         "displayMode": "embed"
       }
     ]
-  },
-  "tech-justification": {
-    "sectionId": "C",
-    "title": "Justification of Tool Choice",
-    "type": "text",
-    "wordLimit": null,
-    "wordCount": 0,
-    "body": "[Placeholder — justify your choice of the two technology tools for the selected lesson.]",
-    "resources": []
   },
   "tech-reflection-video": {
     "sectionId": "C",
     "title": "Technology Integration Reflection",
     "type": "video",
-    "durationNote": "5-8 minutes",
-    "description": "[Placeholder — reflect on the ease/challenge of incorporating technology, how you will sustain its use, and how the experience shaped your understanding of teaching and learning.]",
-    "resources": []
+    "durationNote": "",
+    "description": "",
+    "resources": [
+      {
+        "id": "res-1792725333995",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1HFFLaZpXh6yiIFlzh51qnT7eDv0dgswP/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ]
   },
   "caption-c": {
     "sectionId": "C",
@@ -309,6 +308,21 @@
         "id": "res-1792722500201",
         "title": "",
         "url": "https://drive.google.com/file/d/1aJf05maF7qsYD2E7Tj7XTsxd08g-FkLY/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "justification-of-tool-choice": {
+    "sectionId": "C",
+    "title": "Justification of Tool Choice",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792725653187",
+        "title": "",
+        "url": "https://drive.google.com/file/d/11BSx4DFjS8APD9SlLFGJETWrm9tkk-lM/preview",
         "provider": "google-drive",
         "displayMode": "embed"
       }
