@@ -35,8 +35,8 @@
       {
         "id": "res-1",
         "title": "",
-        "url": "",
-        "provider": "other",
+        "url": "https://drive.google.com/file/d/1s8uLsl7zmguhKWZZNAdv2pkcuz35k9Px/preview",
+        "provider": "google-drive",
         "displayMode": "embed"
       }
     ]
@@ -88,7 +88,7 @@
     "mode": "text",
     "maxWords": 200,
     "wordCount": 0,
-    "body": "[Placeholder caption — up to 200 words, or a 2-minute audio/visual clip reflecting on growth in unit and lesson planning.]",
+    "body": "The Unit focuses on the theme of Caribbean Economy and Slavery from the History CSEC syllabus. The unit focuses on guiding children through the experiences of the African during the middle passage and on the plantations. It also highlights the structure of the plantation system that the enslaved African would have laboured in.",
     "resources": []
   },
   "tech-lesson-plan": {
