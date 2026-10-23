@@ -36,6 +36,17 @@ function el(tag, attrs = {}, children = []) {
   return node;
 }
 
+// A Google Drive "share" link (.../file/d/ID/view) is an HTML page, not an
+// image file, so it can't be used directly as an <img src>. This converts a
+// share link into Drive's thumbnail endpoint, which does serve a real image.
+// Any other URL (local path, direct image link, etc.) passes through unchanged.
+function toDirectImageUrl(url) {
+  if (!url) return url;
+  const match = url.match(/drive\.google\.com\/(?:file\/d\/|open\?id=)([^/?&]+)/i);
+  if (match) return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
+  return url;
+}
+
 function showLoadError(container, err) {
   container.innerHTML = `
     <div class="placeholder-box" role="alert">

@@ -48,10 +48,7 @@ function emptyResourceHint(type) {
 function renderCaption(caption, artifact) {
   if (!caption) return null;
   const wrap = el("section", { class: "caption-block", "aria-label": "Section caption" });
-  const limitLabel = caption.allowAV
-    ? `Max ${caption.maxWords} words, or a ${caption.maxAvMinutes}-minute audio/visual clip`
-    : `Max ${caption.maxWords} words`;
-  wrap.appendChild(el("div", { class: "caption-block__label", text: `Caption (${limitLabel})` }));
+  wrap.appendChild(el("div", { class: "caption-block__label", text: "Caption" }));
 
   const hasResources = artifact.resources && artifact.resources.length > 0;
 

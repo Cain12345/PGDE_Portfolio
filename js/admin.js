@@ -639,6 +639,7 @@ function buildSiteInfoForm() {
 
   const fields = [
     ["name", "Name", "text"],
+    ["photo", "Photo URL (shown above the introduction on the home page)", "url"],
     ["discipline", "Subject specialization", "text"],
     ["institution", "Institution", "text"],
     ["course", "Course", "text"],
@@ -651,6 +652,11 @@ function buildSiteInfoForm() {
     const inputEl = type === "textarea" ? el("textarea", { text: student[key] || "" }) : el("input", { type, value: student[key] || "" });
     inputs[key] = inputEl;
     body.appendChild(el("div", { class: "field" }, [el("label", { text: label }), inputEl]));
+    if (key === "photo") {
+      body.appendChild(
+        el("p", { class: "field-hint", text: "Any image URL works — a Google Drive share link, or a path like assets/images/photo.jpg. Leave blank to show no photo." })
+      );
+    }
   });
 
   const saveBtn = el("button", { type: "button", class: "btn btn-primary", text: "Save profile" });

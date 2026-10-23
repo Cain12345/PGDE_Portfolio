@@ -11,21 +11,16 @@ async function renderHome() {
       fetchJSON("data/sections.json"),
     ]);
 
-    const deadline = new Date(site.student.submissionDate);
-    const deadlineLabel = deadline.toLocaleString(undefined, {
-      dateStyle: "long",
-      timeStyle: "short",
-    });
+    const photoHtml = site.student.photo
+      ? `<img class="hero__photo" src="${escapeHtml(toDirectImageUrl(site.student.photo))}" alt="${escapeHtml(site.student.name)}">`
+      : "";
 
     heroEl.innerHTML = `
       <p class="section-hero__eyebrow">${escapeHtml(site.student.programme)}</p>
       <h1>${escapeHtml(site.student.name)}</h1>
       <p class="meta">${escapeHtml(site.student.discipline)} &middot; ${escapeHtml(site.student.institution)}</p>
+      ${photoHtml}
       <p>${escapeHtml(site.student.introduction)}</p>
-      <div class="callout">
-        <strong>${escapeHtml(site.student.course)}</strong> portfolio &mdash;
-        submission due ${escapeHtml(deadlineLabel)}.
-      </div>
     `;
 
     tocEl.innerHTML = "";
