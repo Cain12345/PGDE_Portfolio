@@ -14,7 +14,7 @@
     "title": "Unit and Lesson Planning",
     "page": "section-b.html",
     "alternative": "1",
-    "summary": "A sample instructional unit for a major topic in my subject specialization, with a task analysis, lesson objective classification, two contrasting lesson plans, and an instructional scaffolding response.",
+    "summary": "A sample instructional unit for a major topic in my subject specialization, with unit lesson outlines, a task analysis, lesson plans, and an instructional scaffolding response.",
     "caption": {
       "artifactId": "caption-b",
       "maxWords": 200,
@@ -32,7 +32,7 @@
   "C": {
     "title": "Technology Integration",
     "page": "section-c.html",
-    "summary": "A taught lesson demonstrating two technology tools, with justification, and a reflective audio/video response.",
+    "summary": "A taught lesson demonstrating two technology tools, with justification, and a reflective audio response.",
     "caption": {
       "artifactId": "caption-c",
       "maxWords": 100,
@@ -56,14 +56,12 @@
       "maxAvMinutes": 1
     },
     "tasks": [
-      "assessment-standards",
-      "assessment-critique",
-      "critiqued-test",
-      "performance-vs-traditional",
-      "performance-assessment",
-      "performance-rubric",
-      "assessment-goals",
-      "assessment-benefits-challenges"
+      "classroom-assessment-standards",
+      "critique-of-assessment",
+      "critiqued-assessment",
+      "performance-vs-traditional-assessment",
+      "performance-assessment-rubric",
+      "benefits-and-challenges-of-administering-the-assessment"
     ]
   },
   "E": {

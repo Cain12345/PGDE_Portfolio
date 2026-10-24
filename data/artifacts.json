@@ -126,96 +126,6 @@
     "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
     "resources": []
   },
-  "assessment-standards": {
-    "sectionId": "D",
-    "title": "Two Classroom Assessment Standards",
-    "type": "text",
-    "wordLimit": 500,
-    "wordCount": 0,
-    "body": "[Placeholder — choose and explain any two standards of classroom assessment or test development, referencing supporting literature. Max 500 words.]",
-    "resources": []
-  },
-  "assessment-critique": {
-    "sectionId": "D",
-    "title": "Critique of an Existing Assessment",
-    "type": "text",
-    "wordLimit": 700,
-    "wordCount": 0,
-    "body": "[Placeholder — assess the extent to which your appended assessment conforms to the two standards discussed above, and offer 2 suggestions for improvement or adaptation. Max 700 words.]",
-    "resources": []
-  },
-  "critiqued-test": {
-    "sectionId": "D",
-    "title": "Appended Assessment (Critiqued)",
-    "type": "pdf",
-    "description": "[Placeholder — the end-of-term test or assessment being critiqued.]",
-    "resources": [
-      {
-        "id": "res-1",
-        "title": "Critiqued Assessment (PDF)",
-        "url": "assets/documents/critiqued-test.pdf",
-        "provider": "other",
-        "displayMode": "embed"
-      }
-    ]
-  },
-  "performance-vs-traditional": {
-    "sectionId": "D",
-    "title": "Performance vs. Traditional Assessment",
-    "type": "text",
-    "wordLimit": 300,
-    "wordCount": 0,
-    "body": "[Placeholder — describe at least 3 criteria which distinguish performance assessment from traditional assessment. Max 300 words.]",
-    "resources": []
-  },
-  "performance-assessment": {
-    "sectionId": "D",
-    "title": "Performance Assessment (built from Section B unit)",
-    "type": "pdf",
-    "description": "[Placeholder — a performance assessment evaluating understanding of a concept/topic from the Section B unit.]",
-    "resources": [
-      {
-        "id": "res-1",
-        "title": "Performance Assessment (PDF)",
-        "url": "assets/documents/performance-assessment.pdf",
-        "provider": "other",
-        "displayMode": "embed"
-      }
-    ]
-  },
-  "performance-rubric": {
-    "sectionId": "D",
-    "title": "Rubric for the Performance Assessment",
-    "type": "pdf",
-    "description": "[Placeholder — the rubric used to assess the performance assessment above.]",
-    "resources": [
-      {
-        "id": "res-1",
-        "title": "Performance Rubric (PDF)",
-        "url": "assets/documents/performance-rubric.pdf",
-        "provider": "other",
-        "displayMode": "embed"
-      }
-    ]
-  },
-  "assessment-goals": {
-    "sectionId": "D",
-    "title": "Learning Goals and How the Assessment Supports Them",
-    "type": "text",
-    "wordLimit": 250,
-    "wordCount": 0,
-    "body": "[Placeholder — state what you want students to understand about the topic and how the performance assessment task and rubric assist in meeting these goals. Max 250 words.]",
-    "resources": []
-  },
-  "assessment-benefits-challenges": {
-    "sectionId": "D",
-    "title": "Benefits and Challenges of Administering the Assessment",
-    "type": "text",
-    "wordLimit": 450,
-    "wordCount": 0,
-    "body": "[Placeholder — discuss two benefits and two challenges that may arise from administering the rubric and performance assessment. Max 450 words.]",
-    "resources": []
-  },
   "caption-d": {
     "sectionId": "D",
     "title": "Section D Caption",
@@ -323,6 +233,88 @@
         "id": "res-1792725653187",
         "title": "",
         "url": "https://drive.google.com/file/d/11BSx4DFjS8APD9SlLFGJETWrm9tkk-lM/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "classroom-assessment-standards": {
+    "sectionId": "D",
+    "title": "Classroom Assessment Standards",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792808275644",
+        "title": "",
+        "url": "https://drive.google.com/file/d/15dG6VJ2BbOqFQyRpyD2rzbzggo6P0Ylj/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "critique-of-assessment": {
+    "sectionId": "D",
+    "title": "Critique of Assessment",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792808352068",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1q3swySw18S32hcYpbjbDL2EmOCB5FwSP/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "critiqued-assessment": {
+    "sectionId": "D",
+    "title": "Critiqued Assessment",
+    "type": "pdf",
+    "resources": [],
+    "description": ""
+  },
+  "performance-vs-traditional-assessment": {
+    "sectionId": "D",
+    "title": "Performance vs. Traditional Assessment",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792808375074",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1tLuUxNRysuT8hPAz_VsFXqZ7t8YtxQ4k/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "performance-assessment-rubric": {
+    "sectionId": "D",
+    "title": "Performance Assessment & Rubric",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792808399747",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1dfAkZ4s08kh-F621IYFVVQmrYbaIMWY8/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "benefits-and-challenges-of-administering-the-assessment": {
+    "sectionId": "D",
+    "title": "Benefits and Challenges of Administering the Assessment",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792808421401",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1eve0ZvqMiEL7jnjqIT8SgKUNdWmxkTSr/preview",
         "provider": "google-drive",
         "displayMode": "embed"
       }
