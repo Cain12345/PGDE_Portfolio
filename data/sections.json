@@ -75,9 +75,11 @@
       "maxAvMinutes": 1
     },
     "tasks": [
-      "curriculum-integration-report",
-      "curriculum-integration-evidence",
-      "agent-of-change"
+      "lesson-plan-for-curriculum-integration",
+      "curriculum-integration-presentation",
+      "curriculum-integration-report-2",
+      "evidence-of-collaboration",
+      "agent-of-change-2"
     ]
   },
   "F": {
@@ -91,7 +93,10 @@
       "maxAvMinutes": 1
     },
     "tasks": [
-      "test-video"
+      "feelings",
+      "impact-on-discipline",
+      "continued-professional-development",
+      "philosophy-of-education"
     ]
   }
 }

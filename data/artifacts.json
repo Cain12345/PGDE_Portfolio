@@ -123,7 +123,7 @@
     "mode": "text",
     "maxWords": 100,
     "wordCount": 0,
-    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "body": "Technological integration is crucial as it encourages student engagement, motivation and skills needed for 21st century development as technology is rapidly advancing. Through the use of bubbl.us students were able to create their own concept maps to assist with reviewing the topic of immigration. The implementation of the game of Jeopardy encourage students who never attempted in class to volunteer and answer questions.",
     "resources": []
   },
   "caption-d": {
@@ -132,32 +132,7 @@
     "mode": "text",
     "maxWords": 100,
     "wordCount": 0,
-    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
-    "resources": []
-  },
-  "curriculum-integration-report": {
-    "sectionId": "E",
-    "title": "Curriculum Integration Report",
-    "type": "text",
-    "wordLimit": 1000,
-    "wordCount": 0,
-    "body": "[Placeholder — report on collaborating with colleague(s) to teach a lesson using an integrated approach to curriculum delivery, based on a named curriculum integration model with supporting literature. Max 1000 words.]",
-    "resources": []
-  },
-  "curriculum-integration-evidence": {
-    "sectionId": "E",
-    "title": "Evidence of Collaboration",
-    "type": "image",
-    "description": "[Placeholder — photo(s) and/or audio/video clips and lesson plans evidencing the collaboration described above.]",
-    "resources": []
-  },
-  "agent-of-change": {
-    "sectionId": "E",
-    "title": "Agent of Change",
-    "type": "text",
-    "wordLimit": 450,
-    "wordCount": 0,
-    "body": "[Placeholder — (a) analyze what motivates you to be a change agent, (b) describe efforts you are making/can make to influence teaching and learning at your school. 400-450 words.]",
+    "body": "The performance task assessment consists of hands-on projects, labs, presentations, and creative outputs while traditional assessment requires answering questions.. Performance assessments help educators to expand he student comprehension of academic material and the application of critical thinking skills. Instead of testing what a person remembers, it measures how well a person can use and apply what they know.",
     "resources": []
   },
   "caption-e": {
@@ -166,7 +141,7 @@
     "mode": "text",
     "maxWords": 100,
     "wordCount": 0,
-    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "body": "The integration of history and economics was very beneficial for the history students as they were able to learn in depth about economics topics found in history. The economics teacher is more familiar with economics and was capable of providing explanations and giving perspectives that I may not have been able to. Students were able to see the overlap of different subject field and how they intertwine and function in our society. Students may have been able to realise that the importance and relevance of a subject field may not only be directly seen but can be found mixed with fields enhancing them.",
     "resources": []
   },
   "caption-f": {
@@ -175,24 +150,8 @@
     "mode": "text",
     "maxWords": 100,
     "wordCount": 0,
-    "body": "[Placeholder caption — up to 100 words, or a 1-minute audio/visual clip.]",
+    "body": "The purpose of a reflective summary in a portfolio is to critically evaluate personal growth, teaching practices, and learning experiences. It allows the students to fully understand appreciate what they gained from the programme and also shows the examiner what was learnt.",
     "resources": []
-  },
-  "test-video": {
-    "sectionId": "F",
-    "title": "Test Video",
-    "type": "video",
-    "resources": [
-      {
-        "id": "res-1790529526283",
-        "title": "Patient Zero",
-        "url": "https://www.youtube.com/embed/BpR280fXISA",
-        "provider": "youtube",
-        "displayMode": "embed"
-      }
-    ],
-    "durationNote": "",
-    "description": ""
   },
   "instructional-scaffolding": {
     "sectionId": "B",
@@ -273,7 +232,15 @@
     "sectionId": "D",
     "title": "Critiqued Assessment",
     "type": "pdf",
-    "resources": [],
+    "resources": [
+      {
+        "id": "res-1792880902111",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1QuuHd1_-Q4WC4ByBuuARyGnmFXrrsly9/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
     "description": ""
   },
   "performance-vs-traditional-assessment": {
@@ -320,5 +287,116 @@
       }
     ],
     "description": ""
+  },
+  "curriculum-integration-report-2": {
+    "sectionId": "E",
+    "title": "Curriculum Integration Report",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792881798930",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1XgPZY9UEaQAM3BRh2yLD-EXRN-rA-KZe/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "evidence-of-collaboration": {
+    "sectionId": "E",
+    "title": "Evidence of Collaboration",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792882340562",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1k6ZzIP4UhFJ342uvdsAQmPiooEUBnsTJ/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "agent-of-change-2": {
+    "sectionId": "E",
+    "title": "Agent of Change",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792882103977",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1s9ral1UEHAh2pc1x2TiO9LINCTmdVVfj/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "curriculum-integration-presentation": {
+    "sectionId": "E",
+    "title": "Curriculum Integration Presentation",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792881676933",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1ooa9qZt8jlz1x40Gpsl8OLohSMvd2Slh/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "lesson-plan-for-curriculum-integration": {
+    "sectionId": "E",
+    "title": "Lesson Plan for Curriculum Integration",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792882009663",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1fYfhTyDhbTXuLyZQYH8m3Sz2m7rq0zkz/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
+  },
+  "feelings": {
+    "sectionId": "F",
+    "title": "Feelings",
+    "type": "text",
+    "resources": [],
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "My feelings during completing the portfolio were ones of being overwhelmed and frustrated at the amount of work required. However this gradually changed. I realised it was a summary or compilations of tasks that reflected some of the main topics and skills we learnt throughout the academic year. I gained an appreciation of the knowledge and skills learnt during my year in this programme."
+  },
+  "impact-on-discipline": {
+    "sectionId": "F",
+    "title": "Impact on discipline",
+    "type": "text",
+    "resources": [],
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "The greatest impact on my discipline would have been the teaching practicum. I believe that the experience and practice of teaching  in different schools and being evaluated on my teaching in front of lecturers has made me more confident and self-assured in my ability as a teacher. I believe that no amount of instruction can accommodate or replace the value of the teaching practicum and the process of preparing and experiencing teaching in other schools.\n\nI understand now that teaching is not merely about passing on information to the students but it is also about student engagement and catering to their various learning abilities and needs."
+  },
+  "continued-professional-development": {
+    "sectionId": "F",
+    "title": "Continued Professional development",
+    "type": "text",
+    "resources": [],
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "I have already attained my Master of Education Concentration in Curriculum and I am uncertain of my academic future in education at this point. I hope I would gain the opportunity to make a greater impact on education beyond teaching but I am not certain what qualifications and what direction I need to take to find that path.  However I appreciated having the opportunity to refine and practice my unit and lesson planning skills and the chance to work and cultivate my teaching practice. I greatly enjoyed being able to conduct games-based research as I was able to create my own history games which very exciting."
+  },
+  "philosophy-of-education": {
+    "sectionId": "F",
+    "title": "Philosophy of Education",
+    "type": "text",
+    "resources": [],
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "My initial philosophy of education has been affected by my participation in the Pedagogy as Process course in a variety ways. Once my teaching practice was very teacher centred and I have learned the importance and value of student centred learning.  I appreciated learning about scaffolding and how to guide students and allowing them to work through problems instead of simply showing them the entire solution.  The affective in my teaching and lesson plans have allowed me to ensure that I focus on engaging students feelings and emotions when teaching. This is extremely applicable in a subject like history which focuses on different topics and experiences of cruelty towards humanity such as wars, colonisation, slavery and indentureship."
   }
 }
