@@ -743,8 +743,12 @@ async function testGithubConnection() {
   if (res.status === 401) throw new Error("Token rejected (401) — it may be invalid, expired, or revoked.");
   if (!res.ok) throw new Error(`GitHub returned ${res.status} checking the repo.`);
   const info = await res.json();
+  // NOTE: `permissions.push` reflects whether YOUR ACCOUNT has push access to
+  // the repo — it does NOT confirm a fine-grained token's own Contents scope.
+  // A token can fail this check as a hard "no", but passing it is not proof
+  // a push will actually succeed; the real test is attempting one.
   if (info.permissions && !info.permissions.push) {
-    throw new Error(`Connected, but this token does not have write access to ${cfg.repo}.`);
+    throw new Error(`Connected, but your account does not have push access to ${cfg.repo} at all.`);
   }
   return info;
 }
@@ -826,7 +830,10 @@ function buildGithubSettingsForm() {
     statusEl.textContent = "Checking…";
     try {
       const info = await testGithubConnection();
-      statusEl.textContent = `Connected to ${info.full_name} with write access.`;
+      statusEl.textContent =
+        `Connected to ${info.full_name}. Your account has push access — but for a fine-grained token, ` +
+        `that alone doesn't guarantee the token's own Contents permission is set to "Read and write." ` +
+        `A real push is the only full test.`;
     } catch (err) {
       statusEl.textContent = `Failed: ${err.message}`;
     }
