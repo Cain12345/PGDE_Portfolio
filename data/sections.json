@@ -2,7 +2,7 @@
   "A": {
     "title": "Introduction",
     "page": "section-a.html",
-    "summary": "Purpose statement, Letter to Self, and a statement of initial teaching philosophy.",
+    "summary": "Purpose statement, letter to self, and a statement of initial teaching philosophy.",
     "caption": null,
     "tasks": [
       "purpose-statement",
@@ -14,7 +14,7 @@
     "title": "Unit and Lesson Planning",
     "page": "section-b.html",
     "alternative": "1",
-    "summary": "A sample instructional unit for a major topic in my subject specialization, with unit lesson outlines, a task analysis, lesson plans, and an instructional scaffolding response.",
+    "summary": "A sample instructional unit for a major topic in my subject specialization, with a task analysis, lesson objective classification, two contrasting lesson plans, and an instructional scaffolding response.",
     "caption": {
       "artifactId": "caption-b",
       "maxWords": 200,
@@ -22,17 +22,22 @@
       "maxAvMinutes": 2
     },
     "tasks": [
+      "unit-conceptual-map",
       "unit-lesson-outlines",
       "task-analysis",
+      "lesson-objectives",
       "lesson-plan-1",
       "lesson-plan-2",
-      "instructional-scaffolding"
+      "scaffolding-response",
+      "scaffolding-flowchart",
+      "antigravity",
+      "research-paper"
     ]
   },
   "C": {
     "title": "Technology Integration",
     "page": "section-c.html",
-    "summary": "A taught lesson demonstrating two technology tools, with justification, and a reflective audio response.",
+    "summary": "A taught lesson demonstrating two technology tools, with justification, and a reflective audio/video response.",
     "caption": {
       "artifactId": "caption-c",
       "maxWords": 100,
@@ -41,7 +46,7 @@
     },
     "tasks": [
       "tech-lesson-plan",
-      "justification-of-tool-choice",
+      "tech-justification",
       "tech-reflection-video"
     ]
   },
@@ -56,12 +61,14 @@
       "maxAvMinutes": 1
     },
     "tasks": [
-      "classroom-assessment-standards",
-      "critique-of-assessment",
-      "critiqued-assessment",
-      "performance-vs-traditional-assessment",
-      "performance-assessment-rubric",
-      "benefits-and-challenges-of-administering-the-assessment"
+      "assessment-standards",
+      "assessment-critique",
+      "critiqued-test",
+      "performance-vs-traditional",
+      "performance-assessment",
+      "performance-rubric",
+      "assessment-goals",
+      "assessment-benefits-challenges"
     ]
   },
   "E": {
@@ -75,11 +82,9 @@
       "maxAvMinutes": 1
     },
     "tasks": [
-      "lesson-plan-for-curriculum-integration",
-      "curriculum-integration-presentation",
-      "curriculum-integration-report-2",
-      "evidence-of-collaboration",
-      "agent-of-change-2"
+      "curriculum-integration-report",
+      "curriculum-integration-evidence",
+      "agent-of-change"
     ]
   },
   "F": {
@@ -93,10 +98,7 @@
       "maxAvMinutes": 1
     },
     "tasks": [
-      "feelings",
-      "impact-on-discipline",
-      "continued-professional-development",
-      "philosophy-of-education"
+      "test-video"
     ]
   }
 }
