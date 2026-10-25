@@ -1,13 +1,13 @@
 {
   "student": {
-    "name": "Deirdre Zoe Subran Ganesh",
+    "name": "Deirdre Zoe Subran-Ganesh",
     "programme": "Postgraduate Diploma in Education, 2025-2026",
     "discipline": "Caribbean History",
     "institution": "The University of the West Indies, St. Augustine",
-    "course": "Pedagogy as Process",
+    "course": "Pedagogy as Process - Deirdre Zoe Subran-Ganesh",
     "submissionDate": "2026-10-18T23:55:00",
-    "introduction": "This comprehensive portfolio serves as a detailed record of my ongoing growth and development as a reflective practitioner throughout the Postgraduate Diploma in Education programme. By intentionally connecting foundational educational theory with everyday classroom practice, the evidence presented here highlights my evolving competency in strategic unit and lesson planning, meaningful technology integration, and responsive student assessment. Ultimately, these curated reflections illustrate my broader professional transformation and deep commitment to continuous improvement as an educator.",
-    "photo": "assets/documents/DZSG Cropped.png"
+    "introduction": "This portfolio documents my growth as a reflective practitioner over the course of the Postgraduate Diploma in Education programme, linking theory and practice across unit and lesson planning, technology integration, assessment, and professional transformation.",
+    "photo": ""
   },
   "sectionOrder": [
     "A",
@@ -16,10 +16,5 @@
     "D",
     "E",
     "F"
-  ],
-  "totalMarks": {
-    "sections": 124,
-    "captions": 18,
-    "grandTotal": 142
-  }
+  ]
 }
