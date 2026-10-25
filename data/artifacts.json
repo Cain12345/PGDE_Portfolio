@@ -394,5 +394,29 @@
       }
     ],
     "description": ""
+  },
+  "technology-integration-tools-used": {
+    "sectionId": "C",
+    "title": "Technology Integration Tools Used",
+    "type": "text",
+    "resources": [
+      {
+        "id": "res-1792963247347",
+        "title": "Jeopardy ",
+        "url": "https://jeopardylabs.com/play/immigration-2070",
+        "provider": "other",
+        "displayMode": "embed"
+      },
+      {
+        "id": "res-1792963270310",
+        "title": "Concept Map",
+        "url": "https://bubbl.us/",
+        "provider": "other",
+        "displayMode": "embed"
+      }
+    ],
+    "wordLimit": null,
+    "wordCount": 0,
+    "body": "Please see the link for the portfolio:"
   }
 }
