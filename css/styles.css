@@ -616,7 +616,7 @@ main {
 
 .export-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-2);
 }
 .export-card {
@@ -624,6 +624,13 @@ main {
   border-radius: var(--radius-sm);
   padding: var(--space-2);
   text-align: center;
+}
+.export-card .btn-row {
+  justify-content: center;
+}
+.export-card .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .export-card--dirty {
   border: 2px solid #e08a3c;

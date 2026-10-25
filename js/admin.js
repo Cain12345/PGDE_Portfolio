@@ -7,13 +7,24 @@
 // it as a convenience lock against accidental edits, never as real security.
 //
 // Source of truth = the JSON files in data/. Edits here are drafted to
-// localStorage (per-browser, per-device only) until you click a Download
-// button and manually replace the matching file in data/.
+// localStorage (per-browser, per-device only) until you either click
+// Download (then replace the file yourself) or click "Push to GitHub"
+// (which commits it directly via the GitHub REST API, see below).
+//
+// GitHub push: this calls api.github.com straight from the browser using a
+// Personal Access Token you provide — there is still no backend, the token
+// just grants this browser write access to one repo. That token sits in
+// localStorage on this device. Unlike the admin password, this is a REAL
+// credential: anyone who gets it can push to your repo. Use a fine-grained
+// PAT scoped to only this repository with "Contents: Read and write" and
+// nothing else, and use "Forget token" below when you're done on a shared
+// machine.
 
 const DRAFT_KEY = "portfolio-admin-draft";
 const AUTH_CACHE_KEY = "portfolio-admin-authcache";
 const SESSION_KEY = "portfolio-admin-active";
 const LAST_EXPORTED_KEY = "portfolio-admin-last-exported";
+const GITHUB_CONFIG_KEY = "portfolio-admin-github-config";
 
 let draft = null;
 let effectiveHash = null;
@@ -25,6 +36,11 @@ let statusMessage = "";
 // sync with what you last published, so the panel can point at exactly the
 // right file instead of a generic "export something" reminder.
 let lastExported = null;
+
+// Result of the most recent GitHub push, so the commit link survives the
+// full re-render that happens right after a successful push (renderPanel()
+// rebuilds the DOM from scratch, which would otherwise wipe a one-off write).
+let lastPushResult = null;
 
 /* ---------------------------------------------------------------------- */
 /* Crypto / auth helpers                                                   */
@@ -678,20 +694,189 @@ function markExported(fileKey) {
   persistLastExported();
 }
 
+/* ---------------------------------------------------------------------- */
+/* GitHub push (Contents API, called directly from the browser)            */
+/* ---------------------------------------------------------------------- */
+
+function loadGithubConfig() {
+  try {
+    const raw = localStorage.getItem(GITHUB_CONFIG_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (err) {
+    /* ignore */
+  }
+  return { repo: "", branch: "main", token: "" };
+}
+
+function saveGithubConfig(cfg) {
+  try {
+    localStorage.setItem(GITHUB_CONFIG_KEY, JSON.stringify(cfg));
+  } catch (err) {
+    /* ignore */
+  }
+}
+
+async function githubApi(path, options = {}) {
+  const cfg = loadGithubConfig();
+  return fetch(`https://api.github.com/repos/${cfg.repo}/${path}`, {
+    ...options,
+    headers: {
+      Authorization: `Bearer ${cfg.token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      ...(options.headers || {}),
+    },
+  });
+}
+
+async function testGithubConnection() {
+  const cfg = loadGithubConfig();
+  if (!cfg.repo || !cfg.token) throw new Error("Enter a repo (owner/name) and a token first.");
+  const res = await fetch(`https://api.github.com/repos/${cfg.repo}`, {
+    headers: {
+      Authorization: `Bearer ${cfg.token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+  });
+  if (res.status === 404) throw new Error(`Repo "${cfg.repo}" not found, or this token can't see it.`);
+  if (res.status === 401) throw new Error("Token rejected (401) — it may be invalid, expired, or revoked.");
+  if (!res.ok) throw new Error(`GitHub returned ${res.status} checking the repo.`);
+  const info = await res.json();
+  if (info.permissions && !info.permissions.push) {
+    throw new Error(`Connected, but this token does not have write access to ${cfg.repo}.`);
+  }
+  return info;
+}
+
+// Creates or updates one file in the repo via a single commit. GitHub's
+// Contents API needs the current file's blob sha to update it (a plain
+// create would conflict), so this reads it first.
+async function pushFileToGithub(filePath, data, commitMessage) {
+  const cfg = loadGithubConfig();
+  if (!cfg.repo || !cfg.token) {
+    throw new Error("Set your GitHub repo and token in “Push to GitHub” settings first.");
+  }
+  const branch = cfg.branch || "main";
+  const content = utf8ToBase64(JSON.stringify(data, null, 2) + "\n");
+
+  let sha;
+  const getRes = await githubApi(`contents/${filePath}?ref=${encodeURIComponent(branch)}`);
+  if (getRes.ok) {
+    sha = (await getRes.json()).sha;
+  } else if (getRes.status !== 404) {
+    const body = await getRes.json().catch(() => ({}));
+    throw new Error(`Could not read current ${filePath} (${getRes.status}): ${body.message || getRes.statusText}`);
+  }
+
+  const putRes = await githubApi(`contents/${filePath}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: commitMessage, content, branch, ...(sha ? { sha } : {}) }),
+  });
+  if (!putRes.ok) {
+    const body = await putRes.json().catch(() => ({}));
+    throw new Error(`GitHub rejected the push for ${filePath} (${putRes.status}): ${body.message || putRes.statusText}`);
+  }
+  return putRes.json();
+}
+
+function buildGithubSettingsForm() {
+  const cfg = loadGithubConfig();
+  const wrap = el("div", { class: "admin-section-group" });
+  wrap.appendChild(el("div", {}, [el("span", { text: "Push to GitHub" })]));
+  const body = el("div", { class: "admin-section-group__body" });
+
+  body.appendChild(
+    el("div", { class: "admin-banner" }, [
+      el("strong", { text: "This token is a real credential" }),
+      el("span", {
+        text:
+          "It's stored only in this browser's localStorage and used to call GitHub's API directly — never written into any file that gets committed. " +
+          "Use a fine-grained Personal Access Token scoped to ONLY this repository with “Contents: Read and write” permission, nothing broader. " +
+          "Anyone with access to this browser profile could read it from storage, so forget it below when you're done on a shared machine.",
+      }),
+    ])
+  );
+
+  const repoInput = el("input", { type: "text", placeholder: "owner/repo, e.g. Cain12345/PGDE_Portfolio", value: cfg.repo });
+  const branchInput = el("input", { type: "text", placeholder: "main", value: cfg.branch || "main" });
+  const tokenInput = el("input", { type: "password", placeholder: "GitHub personal access token", value: cfg.token });
+  const statusEl = el("p", { class: "field-hint" });
+
+  body.appendChild(el("div", { class: "field" }, [el("label", { text: "Repository (owner/repo)" }), repoInput]));
+  body.appendChild(el("div", { class: "field" }, [el("label", { text: "Branch" }), branchInput]));
+  body.appendChild(el("div", { class: "field" }, [el("label", { text: "Personal access token" }), tokenInput]));
+  body.appendChild(statusEl);
+
+  const btnRow = el("div", { class: "btn-row" });
+  const saveBtn = el("button", { type: "button", class: "btn btn-primary", text: "Save settings" });
+  saveBtn.addEventListener("click", () => {
+    if (!/^[^/\s]+\/[^/\s]+$/.test(repoInput.value.trim())) {
+      statusEl.textContent = 'Repository should look like "owner/repo".';
+      return;
+    }
+    saveGithubConfig({ repo: repoInput.value.trim(), branch: branchInput.value.trim() || "main", token: tokenInput.value });
+    statusEl.textContent = "Saved for this browser.";
+  });
+
+  const testBtn = el("button", { type: "button", class: "btn", text: "Test connection" });
+  testBtn.addEventListener("click", async () => {
+    saveGithubConfig({ repo: repoInput.value.trim(), branch: branchInput.value.trim() || "main", token: tokenInput.value });
+    statusEl.textContent = "Checking…";
+    try {
+      const info = await testGithubConnection();
+      statusEl.textContent = `Connected to ${info.full_name} with write access.`;
+    } catch (err) {
+      statusEl.textContent = `Failed: ${err.message}`;
+    }
+  });
+
+  const forgetBtn = el("button", { type: "button", class: "btn btn-danger", text: "Forget token" });
+  forgetBtn.addEventListener("click", () => {
+    saveGithubConfig({ repo: repoInput.value.trim(), branch: branchInput.value.trim() || "main", token: "" });
+    tokenInput.value = "";
+    statusEl.textContent = "Token cleared from this browser.";
+  });
+
+  btnRow.appendChild(saveBtn);
+  btnRow.appendChild(testBtn);
+  btnRow.appendChild(forgetBtn);
+  body.appendChild(btnRow);
+
+  wrap.appendChild(body);
+  return wrap;
+}
+
 function buildExportSection() {
   const wrap = el("div", { class: "admin-section-group", id: "publish-section" });
   const dirty = computeDirtyFiles();
+  const cfg = loadGithubConfig();
+  const githubReady = Boolean(cfg.repo && cfg.token);
   wrap.appendChild(
     el("div", {}, [
-      el("span", { text: "Publish (download & replace files in data/)" }),
+      el("span", { text: "Publish" }),
       el("span", { class: "badge", text: dirty.length ? `${dirty.length} to export` : "All published" }),
     ])
   );
   const body = el("div", { class: "admin-section-group__body" });
 
   body.appendChild(
-    el("p", { class: "field-hint", text: "Downloading a file does not change your live site — replace the matching file in data/ and refresh/redeploy." })
+    el("p", {
+      class: "field-hint",
+      text: githubReady
+        ? "“Push to GitHub” commits straight to your repo. “Download” is a manual fallback — replace the file in data/ yourself."
+        : "Set up “Push to GitHub” below to publish with one click, or use Download and replace the file in data/ manually.",
+    })
   );
+
+  const pushStatusEl = el("p", { class: "field-hint" });
+  if (lastPushResult) {
+    pushStatusEl.appendChild(el("span", { text: `Committed ${lastPushResult.filename}: ` }));
+    pushStatusEl.appendChild(
+      el("a", { href: lastPushResult.url, target: "_blank", rel: "noopener", text: lastPushResult.sha.slice(0, 7) })
+    );
+  }
 
   const grid = el("div", { class: "export-grid" });
   const fileSpecs = [
@@ -704,6 +889,13 @@ function buildExportSection() {
       getData: () => ({ passwordHash: effectiveHash, note: "SHA-256 hex digest — not secret, only gates the Admin UI." }),
     },
   ];
+
+  async function pushOne(filename, key, getData) {
+    const result = await pushFileToGithub(`data/${filename}`, getData(), `Update ${filename} via Admin panel`);
+    markExported(key);
+    return result;
+  }
+
   fileSpecs.forEach(({ filename, key, getData }) => {
     const isDirty = dirty.includes(filename);
     const card = el("div", { class: `export-card${isDirty ? " export-card--dirty" : ""}` });
@@ -711,21 +903,69 @@ function buildExportSection() {
     card.appendChild(
       el("p", { class: `badge${isDirty ? " badge--warning" : ""}`, text: isDirty ? "Needs export" : "Up to date" })
     );
-    const btn = el("button", { type: "button", class: `btn${isDirty ? " btn-primary" : ""}`, text: "Download" });
-    btn.addEventListener("click", () => {
+
+    const cardBtnRow = el("div", { class: "btn-row" });
+
+    const pushBtn = el("button", {
+      type: "button",
+      class: `btn${isDirty ? " btn-primary" : ""}`,
+      text: "Push to GitHub",
+      disabled: githubReady ? null : "disabled",
+    });
+    pushBtn.addEventListener("click", async () => {
+      pushBtn.disabled = true;
+      pushBtn.textContent = "Pushing…";
+      try {
+        const result = await pushOne(filename, key, getData);
+        lastPushResult = { filename, sha: result.commit.sha, url: result.commit.html_url };
+        statusMessage = `Pushed ${filename} to ${cfg.repo}.`;
+        renderPanel();
+      } catch (err) {
+        pushBtn.disabled = false;
+        pushBtn.textContent = "Push to GitHub";
+        pushStatusEl.textContent = `Failed to push ${filename}: ${err.message}`;
+      }
+    });
+    cardBtnRow.appendChild(pushBtn);
+
+    const downloadBtn = el("button", { type: "button", class: "btn", text: "Download" });
+    downloadBtn.addEventListener("click", () => {
       downloadJSON(filename, getData());
       markExported(key);
       statusMessage = `Downloaded ${filename}. Replace it in data/${filename} to publish this change.`;
       renderPanel();
     });
-    card.appendChild(btn);
+    cardBtnRow.appendChild(downloadBtn);
+
+    card.appendChild(cardBtnRow);
     grid.appendChild(card);
   });
   body.appendChild(grid);
+  body.appendChild(pushStatusEl);
 
   const btnRow = el("div", { class: "btn-row" });
+  if (dirty.length && githubReady) {
+    const pushAllBtn = el("button", { type: "button", class: "btn btn-primary", text: `Push all ${dirty.length} changed file(s) to GitHub` });
+    pushAllBtn.addEventListener("click", async () => {
+      pushAllBtn.disabled = true;
+      pushAllBtn.textContent = "Pushing…";
+      const results = [];
+      for (const { filename, key, getData } of fileSpecs) {
+        if (!dirty.includes(filename)) continue;
+        try {
+          await pushOne(filename, key, getData);
+          results.push(`${filename}: pushed`);
+        } catch (err) {
+          results.push(`${filename}: FAILED (${err.message})`);
+        }
+      }
+      statusMessage = `Push to ${cfg.repo} finished — ${results.join("; ")}`;
+      renderPanel();
+    });
+    btnRow.appendChild(pushAllBtn);
+  }
   if (dirty.length) {
-    const downloadAllBtn = el("button", { type: "button", class: "btn btn-primary", text: `Download all ${dirty.length} changed file(s)` });
+    const downloadAllBtn = el("button", { type: "button", class: "btn", text: `Download all ${dirty.length} changed file(s)` });
     downloadAllBtn.addEventListener("click", () => {
       fileSpecs.forEach(({ filename, key, getData }) => {
         if (!dirty.includes(filename)) return;
@@ -837,6 +1077,7 @@ function renderPanel() {
     root.appendChild(buildSectionGroup(sectionId));
   });
 
+  root.appendChild(buildGithubSettingsForm());
   root.appendChild(buildExportSection());
   root.appendChild(buildPasswordForm());
 }

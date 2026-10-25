@@ -47,6 +47,19 @@ function toDirectImageUrl(url) {
   return url;
 }
 
+// Base64-encodes text safely for UTF-8 content (plain btoa() mangles anything
+// outside Latin-1, e.g. accented names, em dashes). Used when posting file
+// content to the GitHub Contents API, which requires base64.
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = "";
+  const chunkSize = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+  }
+  return btoa(binary);
+}
+
 function showLoadError(container, err) {
   container.innerHTML = `
     <div class="placeholder-box" role="alert">
