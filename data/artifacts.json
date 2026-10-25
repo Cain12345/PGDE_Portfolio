@@ -82,25 +82,6 @@
     "body": "The Unit focuses on the theme of Caribbean Economy and Slavery from the History CSEC syllabus. The unit concentrates on guiding children through the experiences of the African during the middle passage and on the plantations. It also highlights the structure of the plantation system that the enslaved African would have laboured in.",
     "resources": []
   },
-  "tech-lesson-plan": {
-    "sectionId": "C",
-    "title": "Lesson Plan with Two Technology Tools",
-    "type": "pdf",
-    "tools": [
-      "[Placeholder tool 1]",
-      "[Placeholder tool 2]"
-    ],
-    "description": "",
-    "resources": [
-      {
-        "id": "res-1",
-        "title": "",
-        "url": "https://drive.google.com/file/d/1HdeoBSUCKaLE3zcbEhARx2BIGftIBUnP/preview",
-        "provider": "google-drive",
-        "displayMode": "embed"
-      }
-    ]
-  },
   "tech-reflection-video": {
     "sectionId": "C",
     "title": "Technology Integration Reflection",
@@ -398,5 +379,20 @@
     "wordLimit": null,
     "wordCount": 0,
     "body": "My initial philosophy of education has been affected by my participation in the Pedagogy as Process course in a variety ways. Once my teaching practice was very teacher centred and I have learned the importance and value of student centred learning.  I appreciated learning about scaffolding and how to guide students and allowing them to work through problems instead of simply showing them the entire solution.  The affective in my teaching and lesson plans have allowed me to ensure that I focus on engaging students feelings and emotions when teaching. This is extremely applicable in a subject like history which focuses on different topics and experiences of cruelty towards humanity such as wars, colonisation, slavery and indentureship."
+  },
+  "lesson-plan-with-two-technology-tools": {
+    "sectionId": "C",
+    "title": "Lesson Plan with Two Technology Tools",
+    "type": "pdf",
+    "resources": [
+      {
+        "id": "res-1792893864109",
+        "title": "",
+        "url": "https://drive.google.com/file/d/1HdeoBSUCKaLE3zcbEhARx2BIGftIBUnP/preview",
+        "provider": "google-drive",
+        "displayMode": "embed"
+      }
+    ],
+    "description": ""
   }
 }
